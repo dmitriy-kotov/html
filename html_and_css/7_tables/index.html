@@ -1,0 +1,39 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Объединение строк</h1>
+    Для объединения строк по аналогии со столбцами используется атрибут
+    <b>"rowspan"</b>. Только в данном случае, ячейка растягивается вниз на указанное
+    количество строк.
+    <br>
+    <br>
+    <b>Пример</b>
+    <table border="1">
+      <tr>
+        <td rowspan="2">Левая ячейка</td>
+        <td>Верхняя ячейка</td>
+      </tr>
+      <tr>
+        <td>Нижняя ячейка</td>
+      </tr>
+    </table>
+    <br />
+    <h2>Объединение строк и столбцов можно сочетать:</h2>
+    <b>Пример</b>
+    <table border="1">
+      <tr>
+        <td rowspan="2">Левая ячейка</td>
+        <td>Средняя ячейка</td>
+        <td>Правая ячейка</td>
+      </tr>
+      <tr>
+        <td colspan="2">Нижняя ячейка</td>
+      </tr>
+    </table>
+    <br />
+  </body>
+</html>
