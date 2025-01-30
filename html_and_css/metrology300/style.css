@@ -2,7 +2,22 @@ h1 {
     text-align: center;
 }
 
-/* td,
-th {
-    border: 0;
-} */
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px;
+    border-spacing: 0px;
+    border-color: black;
+    border-style: solid;
+}
+
+caption {
+    text-align: left;
+}
+
+caption.protocol_number {
+    text-align: center;
+}
