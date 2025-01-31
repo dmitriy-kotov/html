@@ -1,23 +1,75 @@
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 table {
-    border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 th,
 td {
-    border: 1px;
-    border-spacing: 0px;
-    border-color: black;
-    border-style: solid;
+  border: 1px;
+  border-spacing: 0px;
+  border-color: black;
+  border-style: solid;
 }
 
 caption {
+  text-align: left;
+}
+
+table.protocol_number caption {
+  text-align: center;
+}
+
+table.protocol_number th,
+table.protocol_number td {
     text-align: left;
 }
 
-caption.protocol_number {
+th,
+td {
     text-align: center;
+}
+
+td.on-edge {
+    background-color: yellow;
+}
+
+td.failed {
+    background-color: red;
+}
+
+li {
+  /*list-style-type: none !important;*/ /* Убираем нумерацию */
+  list-style-type: decimal; /* Оставляем нумерацию в IE6 и ниже */
+}
+
+li li {
+  list-style-type: none !important; /* Убираем нумерацию */
+  list-style-type: decimal; /* Оставляем нумерацию в IE6 и ниже */
+}
+
+ol {
+  counter-reset: list1; /* Инициируем счётчик */
+}
+
+ol li::before {
+  counter-increment: list1; /* Увеличиваем значение счетчика */
+  content: counter(list1) ". "; /* Выводим значение типа 1., 2. и т. д.*/
+  visibility: hidden; /* Делаем число пункта невидимым */
+  font-size: 0; /* Убираем занимаемое числом место */
+  /* display: none; не помог бы, потому что обнуляет нумерацию */
+}
+
+ol ol {
+  counter-reset: list2; /* Инициируем счётчик вложенного списка */
+}
+
+ol ol li::before {
+  counter-increment: list2; /* Увеличиваем значение счётчика */
+  content: counter(list1) "." counter(list2) ". "; /* Выводим значение типа 2.1, 2.2 и т. д. */
+  /* К нумерации подпунктов применяются стили пунктов — убираем их: */
+  visibility: visible;
+  font-size: 100%;
 }
