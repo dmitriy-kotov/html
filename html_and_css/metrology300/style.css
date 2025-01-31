@@ -32,6 +32,10 @@ td {
     text-align: center;
 }
 
+td.passed {
+    background-color: white;
+}
+
 td.on-edge {
     background-color: yellow;
 }
