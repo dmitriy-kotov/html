@@ -60,6 +60,7 @@ li li {
 
 ol {
   counter-reset: list1; /* Инициируем счётчик */
+  padding-inline-start: 15px;
 }
 
 ol li::before {
@@ -72,6 +73,7 @@ ol li::before {
 
 ol ol {
   counter-reset: list2; /* Инициируем счётчик вложенного списка */
+  padding-inline-start: 0px;
 }
 
 ol ol li::before {
