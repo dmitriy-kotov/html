@@ -4,10 +4,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <script language="javascript">
+      function printEl() {
+        var printContents = document.getElementById("printed_area").innerHTML;
+        var originalContents = document.body.innerHTML;
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
+      }
+    </script>
   </head>
   <body>
-    <div>
-      <img class="logo" src="nrts.png" title="Завод 'НАРТИС'" alt="Logo 'NARTIS'" />
+    <div class="printout_panel">
+      Печать протокола поверки &nbsp; &nbsp;
+      <input type="button" value="Печать" onclick="printEl();" />
+    </div>
+    <div id="printed_area">
+      <img
+        class="logo"
+        src="nrts.png"
+        title="Завод 'НАРТИС'"
+        alt="Logo 'NARTIS'"
+      />
       <h1>ПРОТОКОЛ ПОВЕРКИ</h1>
       <table class="protocol_number">
         <caption>

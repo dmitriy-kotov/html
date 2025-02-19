@@ -1,5 +1,12 @@
+.printout_panel {
+  background-color: #ec5e2c;
+  text-align: right;
+  color: #ffffff;
+  font-weight: bold;
+}
+
 img.logo {
-    width: 100%;
+  width: 100%;
 }
 
 h1 {
@@ -23,24 +30,24 @@ table.protocol_number caption {
 
 table.protocol_number th,
 table.protocol_number td {
-    text-align: left;
+  text-align: left;
 }
 
 th,
 td {
-    text-align: center;
+  text-align: center;
 }
 
 td.passed {
-    background-color: white;
+  background-color: white;
 }
 
 td.on-edge {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 td.failed {
-    background-color: red;
+  background-color: red;
 }
 
 li {
